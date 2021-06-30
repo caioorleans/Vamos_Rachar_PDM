@@ -17,7 +17,7 @@
         android:fontFamily="@font/chango"
         android:text="Vamos rachar!"
         android:textAlignment="center"
-        android:textColor="#66BB6A"
+        android:textColor="#3AE775"
         android:textSize="48sp"
         app:layout_constraintBottom_toTopOf="@+id/editTextValor"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,29 +29,37 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:fontFamily="@font/chango"
         android:inputType="numberDecimal"
-        app:layout_constraintBottom_toTopOf="@+id/editTextQdePessoas"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="@+id/editTextQdePessoas"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/editTextQdePessoas"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
 
     <EditText
         android:id="@+id/editTextQdePessoas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:fontFamily="@font/chango"
         android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/textTotal"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextValor" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
 
     <TextView
         android:id="@+id/textTotal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/chango"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/floatingActionButtonTTS"
+        android:textColor="#3AE775"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/floatingActionButtonsCompartilhar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextQdePessoas" />
@@ -60,24 +68,53 @@
         android:id="@+id/floatingActionButtonsCompartilhar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#3AE775"
         android:clickable="true"
-        app:layout_constraintBottom_toBottomOf="@+id/floatingActionButtonTTS"
+        app:fabSize="auto"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/floatingActionButtonTTS"
-        app:layout_constraintTop_toTopOf="@+id/floatingActionButtonTTS"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
+        app:layout_constraintTop_toBottomOf="@+id/textTotal"
+        app:srcCompat="@drawable/ic_baseline_share_24" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButtonTTS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#3AE775"
         android:clickable="true"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/floatingActionButtonsCompartilhar"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textTotal"
-        app:srcCompat="@drawable/ic_pessoa" />
+        app:srcCompat="@drawable/ic_baseline_volume_up_24"
+        tools:layout_editor_absoluteY="603dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/chango"
+        android:text="R$"
+        android:textColor="#3AE775"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/editTextValor"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="274dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="false"
+        android:scaleType="centerInside"
+        android:scaleX="2"
+        android:scaleY="2"
+        app:layout_constraintEnd_toStartOf="@+id/editTextQdePessoas"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_baseline_people_alt_24"
+        tools:layout_editor_absoluteY="395dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
