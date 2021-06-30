@@ -19,8 +19,9 @@
         android:textAlignment="center"
         android:textColor="#3AE775"
         android:textSize="48sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextValor"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -32,10 +33,9 @@
         android:fontFamily="@font/chango"
         android:inputType="numberDecimal"
         app:layout_constraintBottom_toBottomOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="@+id/editTextQdePessoas"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="@+id/editTextQdePessoas"
         app:layout_constraintTop_toTopOf="@+id/textView" />
 
     <EditText
@@ -59,10 +59,11 @@
         android:text="TextView"
         android:textColor="#3AE775"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/floatingActionButtonsCompartilhar"
+        app:layout_constraintBottom_toTopOf="@+id/floatingActionButtonTTS"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextQdePessoas" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButtonsCompartilhar"
@@ -71,11 +72,11 @@
         android:backgroundTint="#3AE775"
         android:clickable="true"
         app:fabSize="auto"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/floatingActionButtonTTS"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/floatingActionButtonTTS"
-        app:layout_constraintTop_toBottomOf="@+id/textTotal"
+        app:layout_constraintTop_toTopOf="@+id/floatingActionButtonTTS"
         app:srcCompat="@drawable/ic_baseline_share_24" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -84,11 +85,12 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#3AE775"
         android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/floatingActionButtonsCompartilhar"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_baseline_volume_up_24"
-        tools:layout_editor_absoluteY="603dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textTotal"
+        app:srcCompat="@drawable/ic_baseline_volume_up_24" />
 
     <TextView
         android:id="@+id/textView"
@@ -98,10 +100,11 @@
         android:text="R$"
         android:textColor="#3AE775"
         android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toStartOf="@+id/editTextValor"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="274dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -111,10 +114,11 @@
         android:scaleType="centerInside"
         android:scaleX="2"
         android:scaleY="2"
+        app:layout_constraintBottom_toTopOf="@+id/textTotal"
         app:layout_constraintEnd_toStartOf="@+id/editTextQdePessoas"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_baseline_people_alt_24"
-        tools:layout_editor_absoluteY="395dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/ic_baseline_people_alt_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
