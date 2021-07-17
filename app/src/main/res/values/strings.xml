@@ -5,8 +5,8 @@
     <string name="total_de_pessoas">Total de pessoas</string>
     <string name="textview">TextView</string>
     <string name="r">R$</string>
-    <string name="toque_para_compartilhar_o_valor_por_pessoa">Toque para compartilhar o valor por pessoa.</string>
-    <string name="toque_para_falar_o_valor_por_pessoa">Toque para falar o valor por pessoa.</string>
+    <string name="toque_para_compartilhar_o_valor_por_pessoa">Compartilhar o valor por pessoa.</string>
+    <string name="toque_para_falar_o_valor_por_pessoa">Falar o valor por pessoa.</string>
     <string name="digite_no_campo_ao_lado_o_valor_da_conta">Digite no campo ao lado o valor da conta</string>
     <string name="digite_no_campo_ao_lado_o_total_de_pessoas">Digite no campo ao lado o total de pessoas</string>
     <string name="O_valor_por_pessoa_é_de">O valor por pessoa é de </string>
