@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lets Split up the bill!</string>
+    <string name="vamos_rachar">Lets Split up the bill!</string>
+    <string name="valor_da_conta">Bill value</string>
+    <string name="total_de_pessoas">Quantity of people</string>
+    <string name="textview">TextView</string>
+    <string name="r">US$</string>
+    <string name="toque_para_compartilhar_o_valor_por_pessoa">Tap to share the value per person.</string>
+    <string name="toque_para_falar_o_valor_por_pessoa">Tap to talk the amount per person.</string>
+    <string name="digite_no_campo_ao_lado_o_valor_da_conta">Type in the side field the bill value</string>
+    <string name="digite_no_campo_ao_lado_o_total_de_pessoas">Type in the side field the total number of people</string>
+    <string name="O_valor_por_pessoa_é_de">The value per person is </string>
+</resources>

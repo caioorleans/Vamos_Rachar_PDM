@@ -18,10 +18,9 @@
         android:text="@string/vamos_rachar"
         android:textAlignment="center"
         android:textColor="#303030"
-        android:textSize="48sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextValor"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -34,12 +33,10 @@
         android:hint="@string/valor_da_conta"
         android:inputType="numberDecimal"
         android:textColorHint="@color/material_on_primary_disabled"
-        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintBottom_toTopOf="@+id/editTextQdePessoas"
         app:layout_constraintEnd_toEndOf="@+id/editTextQdePessoas"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintStart_toStartOf="@+id/editTextQdePessoas"
-        app:layout_constraintTop_toTopOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <EditText
         android:id="@+id/editTextQdePessoas"
@@ -50,11 +47,10 @@
         android:hint="@string/total_de_pessoas"
         android:inputType="number"
         android:textColorHint="@color/material_on_primary_disabled"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        app:layout_constraintBottom_toTopOf="@+id/textTotal"
+        app:layout_constraintEnd_toEndOf="@+id/textTotal"
+        app:layout_constraintStart_toStartOf="@+id/textTotal"
+        app:layout_constraintTop_toBottomOf="@+id/editTextValor" />
 
     <TextView
         android:id="@+id/textTotal"
@@ -65,11 +61,10 @@
         android:text="@string/textview"
         android:textColor="#303030"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/floatingActionButtonTTS"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextQdePessoas" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButtonsCompartilhar"
@@ -80,11 +75,11 @@
         android:contentDescription="@string/toque_para_compartilhar_o_valor_por_pessoa"
         app:borderWidth="0dp"
         app:fabSize="auto"
-        app:layout_constraintBottom_toBottomOf="@+id/floatingActionButtonTTS"
+        app:layout_constraintBottom_toTopOf="@+id/floatingActionButtonTTS"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/floatingActionButtonTTS"
-        app:layout_constraintTop_toTopOf="@+id/floatingActionButtonTTS"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_share_24" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -96,39 +91,36 @@
         android:contentDescription="@string/toque_para_falar_o_valor_por_pessoa"
         app:borderWidth="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/floatingActionButtonsCompartilhar"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textTotal"
+        app:layout_constraintEnd_toEndOf="@+id/floatingActionButtonsCompartilhar"
+        app:layout_constraintStart_toStartOf="@+id/floatingActionButtonsCompartilhar"
+        app:layout_constraintTop_toBottomOf="@+id/floatingActionButtonsCompartilhar"
         app:srcCompat="@drawable/ic_baseline_volume_up_24" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="54dp"
         android:contentDescription="@string/digite_no_campo_ao_lado_o_valor_da_conta"
         android:fontFamily="@font/chango"
         android:text="@string/r"
         android:textColor="#303030"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextValor"
         app:layout_constraintEnd_toStartOf="@+id/editTextValor"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toTopOf="@+id/editTextValor" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="55dp"
         android:adjustViewBounds="false"
         android:contentDescription="@string/digite_no_campo_ao_lado_o_total_de_pessoas"
         android:scaleType="centerInside"
-        app:layout_constraintBottom_toTopOf="@+id/textTotal"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextQdePessoas"
         app:layout_constraintEnd_toStartOf="@+id/editTextQdePessoas"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/editTextQdePessoas"
         app:srcCompat="@drawable/ic_baseline_people_alt_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

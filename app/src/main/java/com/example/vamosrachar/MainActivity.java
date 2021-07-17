@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements TextWatcher, View
         etQPessoas = (EditText) findViewById(R.id.editTextQdePessoas);
         tvResultado = (TextView) findViewById(R.id.textTotal);
 
-        tvResultado.setText("R$ 0,00");
+        tvResultado.setText(getString(R.string.r) +" 0,00");
 
         etValor.addTextChangedListener(this);
         etQPessoas.addTextChangedListener(this);
@@ -93,10 +93,10 @@ public class MainActivity extends AppCompatActivity implements TextWatcher, View
             valor1 = Double.parseDouble(etValor.getText().toString());
             valor2 = Integer.parseInt(etQPessoas.getText().toString());
 
-            tvResultado.setText("R$ " + df.format(valor1/valor2));
+            tvResultado.setText( getString(R.string.r) + " " + df.format(valor1/valor2));
         }
         catch(Exception e){
-            tvResultado.setText("R$ 0,00");
+            tvResultado.setText(getString(R.string.r) +" 0,00");
         }
     }
 
@@ -106,12 +106,12 @@ public class MainActivity extends AppCompatActivity implements TextWatcher, View
         if(v == share){
             Intent intent = new Intent(Intent.ACTION_SEND);
             intent.setType("text/plain");
-            intent.putExtra(Intent.EXTRA_TEXT,"A conta dividida por pessoa deu " + tvResultado.getText().toString());
+            intent.putExtra(Intent.EXTRA_TEXT,getString(R.string.O_valor_por_pessoa_é_de) + tvResultado.getText().toString());
             startActivity(intent);
         }
         if(v == tts){
             if(tts!=null){
-                ttsPlayer.speak("O valor por pessoa é de " + tvResultado.getText().toString(), TextToSpeech.QUEUE_FLUSH,null,"ID1");
+                ttsPlayer.speak(getString(R.string.O_valor_por_pessoa_é_de) + " " + tvResultado.getText().toString(), TextToSpeech.QUEUE_FLUSH,null,"ID1");
             }
         }
     }
